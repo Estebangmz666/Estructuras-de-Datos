@@ -1,3 +1,5 @@
+package estebangmz666.preparcial_1.ej1;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
