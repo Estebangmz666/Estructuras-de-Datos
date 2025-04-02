@@ -1,4 +1,4 @@
-package estebangmz666.cola;
+package estebangmz666.queues;
 
 public class Queue<T> {
     private static class Node<T> {
@@ -69,6 +69,14 @@ public class Queue<T> {
             current = current.next;
         }
         return clonedQueue;
+    }
+
+    public void reverseRecursive() {
+        if (!isEmpty()) {
+            T data = dequeue();
+            reverseRecursive();
+            enqueue(data);
+        }
     }
 
     public int size() {
