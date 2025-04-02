@@ -11,8 +11,7 @@ public class Queue<T> {
         }
     }
 
-    private Node<T> front;
-    private Node<T> rear;
+    private Node<T> front, rear;
     private int size;
 
     public Queue() {
@@ -59,6 +58,17 @@ public class Queue<T> {
             throw new RuntimeException("La cola está vacía.");
         }
         return front.data;
+    }
+
+    @Override
+    public Queue<T> clone() {
+        Queue<T> clonedQueue = new Queue<>();
+        Node<T> current = front;
+        while (current != null) {
+            clonedQueue.enqueue(current.data);
+            current = current.next;
+        }
+        return clonedQueue;
     }
 
     public int size() {
