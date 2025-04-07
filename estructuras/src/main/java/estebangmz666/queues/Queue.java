@@ -61,7 +61,7 @@ public class Queue<T> {
     }
 
     @Override
-    public Queue<T> clone() {
+    protected Queue<T> clone() {
         Queue<T> clonedQueue = new Queue<>();
         Node<T> current = front;
         while (current != null) {

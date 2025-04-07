@@ -1,10 +1,10 @@
-package estebangmz666.laboratory_linked_lists.ej2;
+package estebangmz666.laboratory_linked_lists.ej8;
 
 public class Persona {
     private String nombre;
-    private String cedula;
+    private int cedula;
 
-    public Persona(String nombre, String cedula) {
+    public Persona(String nombre, int cedula) {
         this.nombre = nombre;
         this.cedula = cedula;
     }
@@ -13,12 +13,13 @@ public class Persona {
         return nombre;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
     @Override
     public String toString() {
-        return nombre + " (" + cedula + ")";
+        return nombre + " - Cédula: " + cedula;
     }
 }
+
