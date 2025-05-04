@@ -42,15 +42,15 @@ public class Stack<T> {
     }
 
     public T pop() {
-        if (topNode == null) {
-            return null;
+        if (isEmpty()) {
+            throw new IllegalStateException("La pila está vacía");
         }
         Node<T> nodeToRemove = topNode;
         topNode = topNode.getNext();
         nodeToRemove.setNext(null);
         size--;
         return nodeToRemove.getValue();
-    }
+    }    
 
     public T peek() {
         if (topNode == null) {
@@ -66,6 +66,17 @@ public class Stack<T> {
     public boolean isEmpty() {
         return topNode == null;
     }
+
+    public boolean contains(T value) {
+        Node<T> current = topNode;
+        while (current != null) {
+            if (current.getValue().equals(value)) {
+                return true;
+            }
+            current = current.getNext();
+        }
+        return false;
+    }    
 
     @Override
     public String toString() {

@@ -1,6 +1,5 @@
-package estebangmz666.arithmetic_expressions;
+package estebangmz666.stack;
 
-import estebangmz666.stack.Stack;
 import java.util.StringTokenizer;
 
 public class InfixToPostfixConverter {

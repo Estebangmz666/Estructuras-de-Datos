@@ -1,6 +1,4 @@
-package estebangmz666.arithmetic_expressions;
-
-import java.util.Stack;
+package estebangmz666.stack;
 
 public class EvaluatePostFixNotation {
 
